@@ -15,3 +15,43 @@ The dengue fever prognosis dataset contains gene expression data from peripheral
  * Numpy
  * Matplotlib
  * Pandas
+
+## References
+
+```bibtex
+@article{Nascimento2009,
+    author = {Nascimento, E. and Abath, F. and Calzavara, C. and Gomes, A. and Acioli, B. and Brito, C. and Cordeiro, M. and Silva, A. and Andrade, C. M. R. and Gil, L. and Junior, U. B.-N. E. M.},
+    title = {Gene expression profiling during early acute febrile stage of dengue infection can predict the disease outcome},
+    journal = {PLoS ONE},
+    volume = {4},
+    number = {11},
+    pages = {e7892},
+    year = {2009},
+    doi = {10.1371/journal.pone.0007892}
+}
+
+@book{BragaNeto2020,
+    author = {Ulisses Braga-Neto},
+    title = {Fundamentals of Pattern Recognition and Machine Learning},
+    publisher = {Springer Nature Switzerland AG},
+    year = {2020},
+    isbn = {978-3-030-27655-3},
+    doi = {10.1007/978-3-030-27656-0}
+}
+
+@misc{WHO2023,
+    author = {{World Health Organization}},
+    title = {Dengue and Severe Dengue: Fact Sheet},
+    year = {2023},
+    note = {Retrieved December 2, 2024, from \url{https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue}}
+}
+
+@article{Liu2022,
+    author = {Liu, Y. E. and Saul, S. and Rao, A. M. and others},
+    title = {An 8-gene machine learning model improves clinical prediction of severe dengue progression},
+    journal = {Genome Medicine},
+    volume = {14},
+    number = {33},
+    year = {2022},
+    doi = {10.1186/s13073-022-01034-w}
+}
