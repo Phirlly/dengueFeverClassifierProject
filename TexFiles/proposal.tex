@@ -1,0 +1,98 @@
+\documentclass[final]{article} 
+
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2023
+
+
+% ready for submission
+\usepackage{neurips_2023}
+
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2023}
+
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2023}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2023}
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{lineno}
+\linenumbers % Turn on line numbers
+
+
+\title{Dengue Fever Prognosis Study}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{
+    Kshitij Kadam \\
+    Texas A\&M University \\
+    Department of Computer Science \\
+    and Engineering \\
+    \texttt{kkadam3@tamu.edu} \\
+    \And
+    Adekola Okunola \\
+    Texas A\&M University \\
+    Department of Electrical and \\
+    Computer Engineering \\
+    \texttt{phirlly@tamu.edu} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\section*{Dataset Reference}
+The dengue fever prognosis dataset contains gene expression data from peripheral blood mononuclear cells (PBMCs) collected from patients in the early stages of fever. The dataset includes gene expression profiles for 1981 genes and clinical outcomes categorized into classical dengue fever (DF), dengue hemorrhagic fever (DHF), and febrile non-dengue cases. [1]
+
+\section*{Proposal for Dataset Analysis}
+
+\subsection*{Data Cleaning and Preprocessing}
+We will use dimensionality reduction techniques to handle the high-dimensional gene expression data. Principal Component Analysis (PCA) or t-SNE will be employed to reduce dimensionality while preserving variance and structure.
+
+\subsection*{Feature Selection and Extraction}
+We will apply univariate feature selection methods, such as ANOVA F-tests or mutual information scores, to identify the most relevant genes for predicting DHF early in the disease's progression. For multivariate feature selection, Recursive Feature Elimination (RFE) combined with cross-validation will be implemented to iteratively select the best subset of features.
+
+\subsection*{Classification Methods}
+To predict clinical outcomes based on gene expression profiles, we will use classifiers such as Support Vector Machine (SVM) and Random Forest. Linear Discriminant Analysis (LDA) will also be considered for its interpretability. Model performance will be evaluated using a k-fold cross-validation scheme to ensure robustness against overfitting. [2]
+
+
+\section*{References}
+
+
+\medskip
+
+{
+\small
+
+[1] Nascimento, E., Abath, F., Calzavara, C., Gomes, A., Acioli, B., Brito, C., Cordeiro, M., Silva, A., Andrade, C. M. R., Gil, L., and Junior, U. B.-N. E. M. (2009). Gene expression profiling during early acute febrile stage of dengue infection can predict the disease outcome. PLoS ONE, 4(11):e7892. doi:10.1371/journal.pone.0007892.
+
+[2] Ulisses Braga-Neto, Fundamentals of Pattern Recognition and Machine Learning, Springer Nature Switzerland AG, 2020. ISBN 978-3-030-27655-3. DOI: 10.1007/978-3-030-27656-0
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
