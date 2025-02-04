@@ -22,7 +22,7 @@ The dataset reference is included in the final report.
 - Load the dataset (`Dengue_Fever_Prognosis_Dataset.csv`).
 - Identify columns corresponding to **DHF** and **DF** cases.
 - Transpose the dataset for easier processing.
-- Split the dataset into **training (80%)** and **testing (20%)** sets.
+- Split the dataset into **training and testing sets.
 
 ### 2. Feature Selection with ANOVA
 - Apply **Analysis of Variance (ANOVA)** to identify genes with significant differential expression.
@@ -81,7 +81,7 @@ The analysis identified the **most discriminatory genes** and their impact on cl
 - Integrate findings into a **real-time clinical decision-support system**.
 
 ## Acknowledgments
-This project was completed as part of research work at **Texas A&M University**. We appreciate the contributions of researchers in the field of bioinformatics and dengue prognosis.
+This was completed as a project at **Texas A&M University**. We appreciate the contributions of researchers in the field of bioinformatics and dengue prognosis.
 
 ## References
 ```bibtex
