@@ -1,13 +1,72 @@
-# Dengue Fever Prognosis Study
+# Dengue Fever Prognosis Using Machine Learning
 
-## PROBLEM STATEMENT
-Dengue infection affects millions worldwide and can often escalate to severe forms such as Dengue Hemorrhagic Fever (DHF). This escalation necessitates early differentiation from Dengue Fever (DF), despite their overlapping clinical presentations. Gene expression profiling during the febrile phase uncovers distinct transcriptional signatures; DHF patients exhibit diminished activation of innate immunity genes alongside heightened expression of apoptosis-related genes. Linear discriminant analysis (LDA) and Support Vector Machine (SVM) models built from the most effective gene pairs demonstrate high accuracy in distinguishing between DHF and DF by employing ANOVA to identify key discriminatory genes. These computational approaches facilitate the early and precise identification of severe cases, which supports timely intervention and optimizes resource allocation. Such bioinformatics-driven strategies advance the field of precision medicine, helping to alleviate both the health and economic burdens of dengue in endemic regions.
+## Authors  
+**Kshitij Kadam** – Texas A&M University (Department of Computer Science and Engineering)  
+Email: kkadam3@tamu.edu  
+**Adekola Okunola** – Texas A&M University (Department of Electrical and Computer Engineering)  
+Email: phirlly@tamu.edu  
 
-## OBJECTIVES
-The main objective of this study is to use ANOVA to identify key discriminatory genes from the dengue fever prognosis dataset, which contains gene expression profiles for 1981 genes and clinical outcomes categorized into classical dengue fever (DF), dengue hemorrhagic fever (DHF), and febrile non-dengue cases. Linear discriminant analysis (LDA) and Support Vector Machine (SVM) models built from the most effective gene pairs demonstrate high accuracy in distinguishing between DHF and DF.
+## Overview
+This project aims to differentiate between **Dengue Fever (DF)** and **Dengue Hemorrhagic Fever (DHF)** using gene expression data. Advanced statistical and machine learning techniques, including **ANOVA, Support Vector Machine (SVM), Random Forest Classifier, and Linear Discriminant Analysis (LDA)**, are used to classify patients accurately based on gene expression data.
 
-## DATASET REFERENCE
-The dengue fever prognosis dataset contains gene expression data from peripheral blood mononuclear cells (PBMCs) collected from patients in the early stages of fever. The dataset includes gene expression profiles for 1981 genes and clinical outcomes categorized into classical dengue fever (DF), dengue hemorrhagic fever (DHF), and febrile non-dengue cases. \cite{Nascimento2009}
+## Dataset
+The dataset consists of gene expression profiles obtained from peripheral blood mononuclear cells (PBMCs) of **26 patients**, covering **1981 genes**. The classification is based on the following labels:
+- **DF (Dengue Fever)**
+- **DHF (Dengue Hemorrhagic Fever)**
+
+The dataset reference is included in the final report.
+
+## Methodology
+
+### 1. Data Preprocessing
+- Load the dataset (`Dengue_Fever_Prognosis_Dataset.csv`).
+- Identify columns corresponding to **DHF** and **DF** cases.
+- Transpose the dataset for easier processing.
+- Split the dataset into **training (80%)** and **testing (20%)** sets.
+
+### 2. Feature Selection with ANOVA
+- Apply **Analysis of Variance (ANOVA)** to identify genes with significant differential expression.
+- Select the **top 10 genes** with the lowest p-values.
+
+### 3. Classification Models
+#### **a) Random Forest Classifier** (See `CP_Code1AI.py`)
+- Train a **Random Forest model** using the top selected genes.
+- Evaluate the model's performance using **accuracy score** and **classification report**.
+- Identify and visualize important features.
+
+#### **b) Support Vector Machine (SVM)** (See `CP_Code1AII.py` & `CP_Code1AV.py`)
+- Train **SVM classifiers** for different gene pairs.
+- Visualize decision boundaries using **scatter plots**.
+- Evaluate classifiers based on **accuracy and misclassification analysis**.
+
+#### **c) Linear Discriminant Analysis (LDA)** (See `CP_Code1AIII.py` & `CP_Code1AIV.py`)
+- Apply **LDA** to classify DF and DHF cases based on gene expression data.
+- Evaluate performance metrics such as **accuracy and misclassification analysis**.
+- Visualize LDA decision boundaries for selected gene pairs.
+
+### 4. Model Evaluation
+- The top classifiers are selected based on **accuracy**.
+- Misclassified samples are analyzed to identify model limitations.
+- Both **SVM and LDA classifiers** achieved **high accuracy (1.0) on selected gene pairs**.
+
+## Results
+The analysis identified the **most discriminatory genes** and their impact on classifying DF vs. DHF. The models showed high accuracy and strong separation of classes, as demonstrated by the decision boundary visualizations.
+
+### **Key Findings:**
+- **ANOVA** was successful in identifying genes with significant expression differences.
+- **SVM & LDA classifiers** performed exceptionally well with **1.0 accuracy** in top gene pairs.
+- **Random Forest** identified critical gene importance for classification.
+
+## Project Files
+| File Name | Description |
+|-----------|-------------|
+| `CP_Code1A.py` | ANOVA-based feature selection for top discriminatory genes |
+| `CP_Code1AI.py` | Random Forest Classifier for classification |
+| `CP_Code1AII.py` | SVM model for individual gene classification |
+| `CP_Code1AIII.py` | LDA classifier for gene pair analysis |
+| `CP_Code1AIV.py` | LDA classifier with decision boundary visualization |
+| `CP_Code1AV.py` | Advanced SVM classifier with iterative gene selection |
+| `Final Report.pdf` | Detailed report covering research, methodology, results, and references |
 
  ## PROGRAMING LANGUAGE, TOOLS, AND LIBRARIES
  * Python
@@ -16,8 +75,15 @@ The dengue fever prognosis dataset contains gene expression data from peripheral
  * Matplotlib
  * Pandas
 
-## References
+## Future Work
+- Validate models with **larger and more diverse datasets**.
+- Explore **deep learning techniques** for improved classification.
+- Integrate findings into a **real-time clinical decision-support system**.
 
+## Acknowledgments
+This project was completed as part of research work at **Texas A&M University**. We appreciate the contributions of researchers in the field of bioinformatics and dengue prognosis.
+
+## References
 ```bibtex
 @article{Nascimento2009,
     author = {Nascimento, E. and Abath, F. and Calzavara, C. and Gomes, A. and Acioli, B. and Brito, C. and Cordeiro, M. and Silva, A. and Andrade, C. M. R. and Gil, L. and Junior, U. B.-N. E. M.},
