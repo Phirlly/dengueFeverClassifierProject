@@ -68,7 +68,7 @@ The analysis identified the **most discriminatory genes** and their impact on cl
 | `CP_Code1AV.py` | Advanced SVM classifier with iterative gene selection |
 | `Final Report.pdf` | Detailed report covering research, methodology, results, and references |
 
- ## PROGRAMING LANGUAGE, TOOLS, AND LIBRARIES
+ ## Programming Language, Tools, and Libraries
  * Python
  * Scikit-learn
  * Numpy
